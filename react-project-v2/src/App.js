@@ -1,5 +1,5 @@
 import './App.css';
-import SELECTOR from './components/SELECTOR.js';
+import SELECTOR from './components/SELECTOR-component.js';
 
 function App() {
   return (
