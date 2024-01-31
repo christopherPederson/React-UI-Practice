@@ -1,8 +1,7 @@
 import "./App.css";
-import EMPLOYEE from "./components/EMPLOYEE.js";
+import EMPLOYEE from "./components/Employee.js";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import MODAL from "./components/EMPLOYEE-MODAL.js";
 
 function App() {
     const [employee, setEmployees] = useState([
@@ -36,7 +35,6 @@ function App() {
                             image={employee.image}
                             id={employee.id}
                         />
-                        <MODAL />
                     </>
                 );
             })}
