@@ -9,33 +9,31 @@ function App() {
             id: uuidv4(),
             name: "John Doe",
             role: "Manager",
-            image: "https://via.placeholder.com/150",
+            img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
         },
         {
             id: uuidv4(),
             name: "Jane Doe",
             role: "Employee",
-            image: "https://via.placeholder.com/150",
+            img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
         },
         {
             id: uuidv4(),
             name: "John Smith",
             role: "Employee",
-            image: "https://via.placeholder.com/150",
+            img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
         },
     ]);
     return (
         <div className="App">
             {employee.map((employee) => {
                 return (
-                    <>
                         <EMPLOYEE
                             name={employee.name}
                             role={employee.role}
-                            image={employee.image}
+                            img={employee.img}
                             id={employee.id}
                         />
-                    </>
                 );
             })}
         </div>

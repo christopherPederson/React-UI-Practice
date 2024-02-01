@@ -5,6 +5,9 @@ import Modal from "react-bootstrap/Modal";
 let EditEmployee = (props) => {
     const [show, setShow] = useState(false);
 
+    const [name, setName] = useState(props.name);
+    const [role, setRole] = useState(props.role);
+
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -30,8 +33,8 @@ let EditEmployee = (props) => {
                         </Modal.Header>
 
                         <Modal.Body>
-                            <input type="text" defaultValue={props.name} />
-                            <input type="text" defaultValue={props.role} />
+                            <input type="text" defaultValue={name} />
+                            <input type="text" defaultValue={role} />
                         </Modal.Body>
 
                         <Modal.Footer>
