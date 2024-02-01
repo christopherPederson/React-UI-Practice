@@ -11,7 +11,7 @@ let EditEmployee = (props) => {
     return (
         <>
             <Button variant="primary" onClick={handleShow}>
-                Edit Employee
+                Update
             </Button>
 
             <Modal
@@ -20,9 +20,30 @@ let EditEmployee = (props) => {
                 backdrop="static"
                 keyboard={false}
             >
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Role" />
-                <button onClick={handleClose}>Submit</button>
+                <div
+                    className="modal show"
+                    style={{ display: "block", position: "initial" }}
+                >
+                    <Modal.Dialog>
+                        <Modal.Header closeButton onClick={handleClose}>
+                            <Modal.Title>Edit Employee</Modal.Title>
+                        </Modal.Header>
+
+                        <Modal.Body>
+                            <input type="text" defaultValue={props.name} />
+                            <input type="text" defaultValue={props.role} />
+                        </Modal.Body>
+
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                                Close
+                            </Button>
+                            <Button variant="primary" onClick={handleClose}>
+                                Save changes
+                            </Button>
+                        </Modal.Footer>
+                    </Modal.Dialog>
+                </div>
             </Modal>
         </>
     );
