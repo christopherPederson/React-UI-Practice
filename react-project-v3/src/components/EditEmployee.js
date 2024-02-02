@@ -33,15 +33,33 @@ let EditEmployee = (props) => {
                         </Modal.Header>
 
                         <Modal.Body>
-                            <input type="text" defaultValue={name} />
-                            <input type="text" defaultValue={role} />
+                            <input
+                                type="text"
+                                defaultValue={name}
+                                onChange={(e) => {
+                                    setName(e.target.value)
+                                }}
+                            />
+                            <input
+                                type="text"
+                                defaultValue={role}
+                                onChange={(e) => {
+                                    setRole(e.target.value)
+                                }}
+                            />
                         </Modal.Body>
 
                         <Modal.Footer>
                             <Button variant="secondary" onClick={handleClose}>
                                 Close
                             </Button>
-                            <Button variant="primary" onClick={handleClose}>
+                            <Button
+                                variant="primary"
+                                onClick={() => {
+                                    handleClose();
+                                    props.updateEmployee(props.id, name, role);
+                                }}
+                            >
                                 Save changes
                             </Button>
                         </Modal.Footer>
