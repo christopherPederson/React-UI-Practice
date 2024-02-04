@@ -80,7 +80,7 @@ let App = () => {
             name: name,
             role: role,
             img: img,
-        }
+        };
 
         setEmployees([...employee, latestEmployee]);
     };
@@ -100,7 +100,7 @@ let App = () => {
                     );
                 })}
             </div>
-            <AddEmployee createEmployee={createEmployee}/>
+            <AddEmployee createEmployee={createEmployee} />
         </div>
     );
 };

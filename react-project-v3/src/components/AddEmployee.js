@@ -68,6 +68,9 @@ let AddEmployee = (props) => {
                                 variant="primary"
                                 onClick={() => {
                                     handleClose();
+                                    setName("name");
+                                    setRole("role");
+                                    setImg("URL");
                                     props.createEmployee(name, role, img);
                                 }}
                             >
