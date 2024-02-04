@@ -8,14 +8,11 @@ function Employee(props) {
                 src={props.img}
             />
             <div className="text-center space-y-2 sm:text-left">
-                <div className="space-y-0.5">
                     <p className="text-lg text-black font-semibold">
-                        {props.name}
+                        {props.name} &#183; <span className="text-slate-500 font-medium">{props.role}</span>
                     </p>
-                    <p className="text-slate-500 font-medium">{props.role}</p>
-                </div>
+                    <EditEmployee id={props.id} name={props.name} role={props.role} updateEmployee={props.updateEmployee}/>
             </div>
-            <EditEmployee id={props.id} name={props.name} role={props.role} updateEmployee={props.updateEmployee}/>
         </div>
     );
 }
