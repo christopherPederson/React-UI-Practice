@@ -1,5 +1,6 @@
 import "./App.css";
-import EMPLOYEE from "./components/Employee.js";
+import AddEmployee from "./components/AddEmployee.js";
+import Employee from "./components/Employee.js";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -73,20 +74,33 @@ let App = () => {
 
         setEmployees(latestEmployee);
     };
+    let createEmployee = (name, role, img) => {
+        const latestEmployee = {
+            id: uuidv4(),
+            name: name,
+            role: role,
+            img: img,
+        }
+
+        setEmployees([...employee, latestEmployee]);
+    };
 
     return (
         <div className="App flex flex-wrap justify-center">
-            {employee.map((employee) => {
-                return (
-                    <EMPLOYEE
-                        name={employee.name}
-                        role={employee.role}
-                        img={employee.img}
-                        id={employee.id}
-                        updateEmployee={updateEmployee}
-                    />
-                );
-            })}
+            <div className="flex flex-wrap justify-center">
+                {employee.map((employee) => {
+                    return (
+                        <Employee
+                            name={employee.name}
+                            role={employee.role}
+                            img={employee.img}
+                            id={employee.id}
+                            updateEmployee={updateEmployee}
+                        />
+                    );
+                })}
+            </div>
+            <AddEmployee createEmployee={createEmployee}/>
         </div>
     );
 };
