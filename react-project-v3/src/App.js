@@ -2,6 +2,7 @@ import "./App.css";
 import AddEmployee from "./components/AddEmployee.js";
 import EditEmployee from "./components/EditEmployee.js";
 import Employee from "./components/Employee.js";
+import Navbar from "./components/Header.js";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
@@ -87,6 +88,8 @@ let App = () => {
     };
 
     return (
+        <>
+        <Navbar />
         <div className="App flex flex-wrap justify-center">
             <div className="flex flex-wrap justify-center">
                 {employee.map((employee) => {
@@ -112,6 +115,7 @@ let App = () => {
             </div>
             <AddEmployee createEmployee={createEmployee} />
         </div>
+        </>
     );
 };
 
