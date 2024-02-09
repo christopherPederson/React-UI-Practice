@@ -37,14 +37,14 @@ let EditEmployee = (props) => {
                                 type="text"
                                 defaultValue={name}
                                 onChange={(e) => {
-                                    setName(e.target.value)
+                                    setName(e.target.value);
                                 }}
                             />
                             <input
                                 type="text"
                                 defaultValue={role}
                                 onChange={(e) => {
-                                    setRole(e.target.value)
+                                    setRole(e.target.value);
                                 }}
                             />
                         </Modal.Body>

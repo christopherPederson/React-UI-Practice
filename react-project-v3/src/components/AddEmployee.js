@@ -7,7 +7,9 @@ let AddEmployee = (props) => {
 
     const [name, setName] = useState("name");
     const [role, setRole] = useState("role");
-    const [img, setImg] = useState("https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg");
+    const [img, setImg] = useState(
+        "https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg"
+    );
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -70,7 +72,9 @@ let AddEmployee = (props) => {
                                     handleClose();
                                     setName("name");
                                     setRole("role");
-                                    setImg("https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg");
+                                    setImg(
+                                        "https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg"
+                                    );
                                     props.createEmployee(name, role, img);
                                 }}
                             >

@@ -1,4 +1,3 @@
-
 function Employee(props) {
     return (
         <div className="w-96 m-2 py-8 px-8 max-w-sm bg-white rounded-xl shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
