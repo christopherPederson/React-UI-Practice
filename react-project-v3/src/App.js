@@ -4,10 +4,9 @@ import Navbar from "./components/Header.js";
 
 let App = () => {
     return (
-        <>
-        <Navbar />
-        <EmployeesGrouped />
-        </>
+            <Navbar>
+                <EmployeesGrouped />
+            </Navbar>
     );
 };
 
