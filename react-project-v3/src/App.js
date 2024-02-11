@@ -1,6 +1,7 @@
 import "./App.css";
 import EmployeesGrouped from "./components/EmployeesGrouped.js";
 import Navbar from "./components/Header.js";
+import CustomersGrouped from "./components/CustomersGrouped.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 let App = () => {
@@ -9,7 +10,8 @@ let App = () => {
             <Navbar>
                 <BrowserRouter>
                     <Routes>
-                        <Route path="/team" element={<EmployeesGrouped />} />
+                        <Route path="/Employees" element={<EmployeesGrouped />} />
+                        <Route path="/Customers" element={<CustomersGrouped />} />
                     </Routes>
                 </BrowserRouter>
             </Navbar>
