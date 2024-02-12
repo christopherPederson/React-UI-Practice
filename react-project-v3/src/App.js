@@ -7,14 +7,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 let App = () => {
     return (
         <div className="App">
-            <Navbar>
-                <BrowserRouter>
+            <BrowserRouter>
+                <Navbar>
                     <Routes>
-                        <Route path="/Employees" element={<EmployeesGrouped />} />
-                        <Route path="/Customers" element={<CustomersGrouped />} />
+                        <Route
+                            path="/Employees"
+                            element={<EmployeesGrouped />}
+                        />
+                        <Route
+                            path="/Customers"
+                            element={<CustomersGrouped />}
+                        />
                     </Routes>
-                </BrowserRouter>
-            </Navbar>
+                </Navbar>
+            </BrowserRouter>
         </div>
     );
 };
