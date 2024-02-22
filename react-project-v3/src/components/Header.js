@@ -4,9 +4,9 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { NavLink } from "react-router-dom";
 
 const navigation = [
-    { name: "Dashboard", href: "/Employees" },
+    { name: "Employees", href: "/Employees" },
     { name: "Customers", href: "/Customers" },
-    { name: "Projects", href: "/Projects" },
+    { name: "Dictionary", href: "/Dictionary" },
     { name: "Calendar", href: "/Calender" },
 ];
 
