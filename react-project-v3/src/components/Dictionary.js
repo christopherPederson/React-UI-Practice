@@ -4,8 +4,8 @@ export default function Dictionary() {
     let [word, setWord] = useState("");
     let [word2, setWord2] = useState("");
     useEffect(() => {
-        console.log({ word });
-    });
+        console.log(word + " " + word2);
+    }, [word]);
 
     return (
         <>
