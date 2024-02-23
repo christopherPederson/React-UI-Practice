@@ -1,6 +1,6 @@
-import AddEmployee from "./AddEmployee.js";
-import EditEmployee from "./EditEmployee.js";
-import Employee from "./Employee.js";
+import AddEmployee from "../components/AddEmployee.js";
+import EditEmployee from "../components/EditEmployee.js";
+import Employee from "../components/Employee.js";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
