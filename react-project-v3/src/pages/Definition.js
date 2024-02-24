@@ -16,16 +16,16 @@ export default function Definition() {
 
     return (
         <>
-            {searchResults.map((meaning) => {
+            {searchResults? searchResults.map((meaning) => {
                 return (
                     <>
                         <p>
-                            {meaning.partOfSpeech} : 
+                            {meaning.partOfSpeech + ': '}
                             {meaning.definitions[0].definition}
                         </p>
                     </>
                 );
-            })}
+            }): null}
         </>
     );
 }
