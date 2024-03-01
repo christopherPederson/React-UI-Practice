@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Definition() {
+    let { search } = useParams();
+    console.log(useParams());
     let [searchTerm, setSearchTerm] = useState("hello");
     let [searchResults, setSearchResults] = useState([]);
 

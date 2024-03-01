@@ -22,6 +22,7 @@ let App = () => {
                         />
                         <Route path="/Dictionary" element={<Dictionary />} />
                         <Route path="/Definition" element={<Definition />} />
+                        <Route path="/Definition/:search" element={<Definition />} />
                     </Routes>
                 </Navbar>
             </BrowserRouter>
