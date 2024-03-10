@@ -1,6 +1,6 @@
-export default Error404()
+export default function Error404()
 {
     return (
-        <p>error</p>
+        <p>the page you searched was not found</p>
         );
 }

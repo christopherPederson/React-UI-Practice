@@ -10,7 +10,7 @@ export default function Definition() {
     useEffect(() => {
         fetch("https://api.dictionaryapi.dev/api/v2/entries/en/" + search)
             .then((response) => {
-                if (response.status == 404){
+                if (response.status === 404){
                     navigate('/404');
                 }
                 return response.json();
