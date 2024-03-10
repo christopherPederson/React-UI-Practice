@@ -21,7 +21,6 @@ let App = () => {
                             element={<CustomersGrouped />}
                         />
                         <Route path="/Dictionary" element={<Dictionary />} />
-                        <Route path="/Definition" element={<Definition />} />
                         <Route path="/Definition/:search" element={<Definition />} />
                     </Routes>
                 </Navbar>
